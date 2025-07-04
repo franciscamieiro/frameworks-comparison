@@ -24,7 +24,7 @@ const Sphere = ({ dots = [], latCount, lngCount }) => {
         const latOffset = Math.abs(dot.lat - latCenter);
 
         const intensity = 1 - (latOffset / latCenter); // 1 at equator, 0 at poles
-        const floatZ = 30 + (intensity * 20);
+        //const floatZ = 30 + (intensity * 20);
 
         // invert it so poles get smaller delay (they move first)
         const delayFactor = 1 - (latOffset / latCenter);  // 1 at pole, 0 at equator
