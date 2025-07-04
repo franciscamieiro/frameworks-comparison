@@ -1,0 +1,72 @@
+.sphere {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    animation: rotateSphere 20s linear infinite;
+}
+
+.dot-wrapper {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.dot-float {
+    transform: translateZ(var(--float-z, 50px));
+    animation: float 1s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: rgb(195, 68, 211);
+    border-radius: 50%;
+    position: absolute;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes rotateSphere {
+    from {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateZ(var(--float-z, 50px));
+    }
+
+    50% {
+        transform: translateZ(calc(var(--float-z, 50px) - 20px));
+    }
+}
+
+
+/* @keyframes float {
+    0%, 100% {
+        transform: translateZ(50px);
+    }
+    50% {
+        transform: translateZ(30px);
+    }
+}*/

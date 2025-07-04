@@ -1,0 +1,14 @@
+<!-- squares.component.html -->
+<div class="container">
+  <div class="sidebar">
+    <p>Transform changes</p>
+    <button (click)="add10()" class="btn">Add 10 Squares</button>
+    <button (click)="resetSquares()" class="btn">Reset Squares</button>
+  </div>
+  <div class="square-area">
+    <app-square
+      *ngFor="let i of squares()"
+      [left]="(i % 20) * 5"
+    ></app-square>
+  </div>
+</div>

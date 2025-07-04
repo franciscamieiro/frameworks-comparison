@@ -1,0 +1,13 @@
+<div class="sphere">
+    <!-- https://codepen.io/iamlark/pen/jYzYJg -->
+    <div
+      class="dot-wrapper"
+      *ngFor="let dot of dots; let i = index"
+      [style.transform]="
+        'rotateY(' + (dot.lng * (360 / 36)) + 'deg) rotateX(' + (dot.lat * (180 / 18) - 90) + 'deg) translateZ(150px)'
+      "
+      [style.animationDelay]="(i * 0.01) + 's'"
+    >
+    <div class="dot"></div>
+    </div>
+  </div>
