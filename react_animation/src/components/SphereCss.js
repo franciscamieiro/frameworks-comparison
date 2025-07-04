@@ -30,11 +30,11 @@ const Sphere = ({ dots = [], latCount, lngCount }) => {
         const delayFactor = 1 - (latOffset / latCenter);  // 1 at pole, 0 at equator
         const animationDelay = `${delayFactor * 0.5}s`;
 
-        const styleVars = {
+        /*const styleVars = {
           '--float-z': `${floatZ}px`,
           animationDelay,
           transform
-        };
+        };*/
 
         //color dots with different colors:
         // Generate a hue based on latitude
