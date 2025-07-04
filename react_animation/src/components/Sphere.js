@@ -1,4 +1,3 @@
-import React from 'react';
 import './Sphere.css';
 
 //help code: https://codepen.io/iamlark/pen/jYzYJg?editors=0110
@@ -23,7 +22,7 @@ const Sphere = ({ dots = [], latCount, lngCount }) => {
         // calculate how far this lat is from the equator (center)
         const latOffset = Math.abs(dot.lat - latCenter);
 
-        const intensity = 1 - (latOffset / latCenter); // 1 at equator, 0 at poles
+        //const intensity = 1 - (latOffset / latCenter); // 1 at equator, 0 at poles
         //const floatZ = 30 + (intensity * 20);
 
         // invert it so poles get smaller delay (they move first)
