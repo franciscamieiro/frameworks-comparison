@@ -1,13 +1,13 @@
 import './App.css';
-import Sphere from './components/Sphere.js';
-import Buttons from './components/Buttons.js';
-import Squares from './components/Squares.js';
+//import Sphere from './components/Sphere.js';
+//import Buttons from './components/Buttons.js';
+//import Squares from './components/Squares.js';
 import SquaresTransform from './components/SquaresTransform.js';
 
 
 function App() {
 
-  const dots = [];
+  /*const dots = [];
 
   const latCount = 18;
   const lngCount = 36;
@@ -20,7 +20,7 @@ function App() {
     for (let lng = 0; lng < lngSteps; lng++) {
       dots.push({ lat, lng });
     }
-  }
+  }*/
 
   return (
     <div className="App">

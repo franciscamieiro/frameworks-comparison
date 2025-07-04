@@ -5,12 +5,9 @@ import {
   ViewChild,
   ElementRef,
   AfterViewInit,
-  ViewChildren,
-  QueryList,
   OnInit,
   signal,
-  computed,
-  effect
+  computed
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
