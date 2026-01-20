@@ -1,0 +1,14 @@
+<div class="balls-container">
+  <div
+    *ngFor="let ball of balls; index as i; trackBy: trackByFn"
+    class="ball"
+    [ngStyle]="{
+      left: ball.x + 'px',
+      top: ball.y + 'px',
+      width: ball.size + 'px',
+      height: ball.size + 'px',
+      backgroundColor: ball.color,
+      borderRadius: ball.borderRadius + '%'
+    }"
+  ></div>
+</div>

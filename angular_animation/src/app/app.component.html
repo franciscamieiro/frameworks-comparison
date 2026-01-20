@@ -10,8 +10,23 @@
 <main class="App">
   <div class="App-body">
 
-    <app-squares></app-squares>
+    <h1>Angular Balls Benchmark</h1>
+
+    <div class="buttons">
+      <button (click)="handleStart()">Start Animation</button>
+      <button (click)="setBallCount(50)">50 Balls</button>
+      <button (click)="setBallCount(100)">100 Balls</button>
+      <button (click)="setBallCount(500)">500 Balls</button>
+      <button (click)="setBallCount(1000)">1000 Balls</button>
+    </div>
+
+    <app-bouncing-balls [start]="start" [ballCount]="ballCount" (done)="resetStart()" />
+
     <!-- 
+    <app-bouncing-balls-change-detection [start]="start" [ballCount]="ballCount" (done)="resetStart()" />
+    <app-bouncing-ball-framecount></app-bouncing-ball-framecount>
+    <app-bouncing-ball></app-bouncing-ball>
+    <app-squares></app-squares>
     <app-sphere></app-sphere> 
     <app-buttons></app-buttons>
     -->

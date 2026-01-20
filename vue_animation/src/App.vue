@@ -1,47 +1,45 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+
+import { ref } from 'vue';
+import BouncingBalls from './components/BouncingBalls.vue';
+
+const start = ref(false);
+const ballCount = ref(50);
+
+function handleStart() {
+  start.value = true;
+  console.log(start);
+}
+
+function resetStart() {
+  start.value = false;
+}
+
+function handleSetBallCount(count: number) {
+  ballCount.value = count;
+  console.log(count);
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+<div class="App">
+    <div class="App-body">
+      <h1>Vue Balls Benchmark</h1>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <div class="buttons">
+        <button @click="handleStart()">Start Animation</button>
+        <button @click="handleSetBallCount(50)">50 Balls</button>
+        <button @click="handleSetBallCount(100)">100 Balls</button>
+        <button @click="handleSetBallCount(500)">500 Balls</button>
+        <button @click="handleSetBallCount(1000)">1000 Balls</button>
+      </div>
+
+      <BouncingBalls
+        :start="start"
+        :ballCount="ballCount"
+        :onDone="resetStart"
+      />
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>

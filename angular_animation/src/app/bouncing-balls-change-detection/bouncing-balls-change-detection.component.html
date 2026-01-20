@@ -1,0 +1,14 @@
+<div class="balls-container">
+  <h1>Bouncing Balls change detection</h1>
+  <div
+    *ngFor="let ball of balls; index as i"
+    class="ball"
+    [ngStyle]="{
+      left: ball.x + 'px',
+      top: ball.y + 'px',
+      width: ball.size + 'px',
+      height: ball.size + 'px',
+      backgroundColor: ball.color
+    }"
+  ></div>
+</div>
